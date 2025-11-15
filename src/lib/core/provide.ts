@@ -6,6 +6,10 @@ import SlopeDataMathService from "../services/math/SlopeDataMathService";
 import SwingTermMathService from "../services/math/SwingTermMathService";
 import VolumeDataMathService from "../services/math/VolumeDataMathService";
 import BookDataMathService from "../services/math/BookDataMathService";
+import FifteenMinuteCandleHistoryService from "../services/history/FifteenMinuteCandleHistoryService";
+import HourCandleHistoryService from "../services/history/HourCandleHistoryService";
+import OneMinuteCandleHistoryService from "../services/history/OneMinuteCandleHistoryService";
+import ThirtyMinuteCandleHistoryService from "../services/history/ThirtyMinuteCandleHistoryService";
 import { provide } from "./di";
 import { TYPES } from "./types";
 
@@ -21,4 +25,11 @@ import { TYPES } from "./types";
     provide(TYPES.volumeDataMathService, () => new VolumeDataMathService());
     provide(TYPES.slopeDataMathService, () => new SlopeDataMathService());
     provide(TYPES.bookDataMathService, () => new BookDataMathService());
+}
+
+{
+    provide(TYPES.fifteenMinuteCandleHistoryService, () => new FifteenMinuteCandleHistoryService());
+    provide(TYPES.hourCandleHistoryService, () => new HourCandleHistoryService());
+    provide(TYPES.oneMinuteCandleHistoryService, () => new OneMinuteCandleHistoryService());
+    provide(TYPES.thirtyMinuteCandleHistoryService, () => new ThirtyMinuteCandleHistoryService());
 }

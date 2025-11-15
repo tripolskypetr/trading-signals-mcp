@@ -10,6 +10,10 @@ import VolumeDataMathService from "./services/math/VolumeDataMathService";
 import SlopeDataMathService from "./services/math/SlopeDataMathService";
 import MicroTermMathService from "./services/math/MicroTermMathService";
 import BookDataMathService from "./services/math/BookDataMathService";
+import FifteenMinuteCandleHistoryService from "./services/history/FifteenMinuteCandleHistoryService";
+import HourCandleHistoryService from "./services/history/HourCandleHistoryService";
+import OneMinuteCandleHistoryService from "./services/history/OneMinuteCandleHistoryService";
+import ThirtyMinuteCandleHistoryService from "./services/history/ThirtyMinuteCandleHistoryService";
 
 const baseServices = {
     binanceService: inject<BinanceService>(TYPES.binanceService),
@@ -25,9 +29,17 @@ const mathServices = {
     bookDataMathService: inject<BookDataMathService>(TYPES.bookDataMathService),
 }
 
+const historyServices = {
+    fifteenMinuteCandleHistoryService: inject<FifteenMinuteCandleHistoryService>(TYPES.fifteenMinuteCandleHistoryService),
+    hourCandleHistoryService: inject<HourCandleHistoryService>(TYPES.hourCandleHistoryService),
+    oneMinuteCandleHistoryService: inject<OneMinuteCandleHistoryService>(TYPES.oneMinuteCandleHistoryService),
+    thirtyMinuteCandleHistoryService: inject<ThirtyMinuteCandleHistoryService>(TYPES.thirtyMinuteCandleHistoryService),
+}
+
 const signal = {
     ...baseServices,
     ...mathServices,
+    ...historyServices,
 }
 
 init();

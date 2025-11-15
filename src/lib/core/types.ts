@@ -12,7 +12,15 @@ const mathServices = {
     bookDataMathService: Symbol.for('bookDataMathService'),
 }
 
+const historyServices = {
+    fifteenMinuteCandleHistoryService: Symbol.for('fifteenMinuteCandleHistoryService'),
+    hourCandleHistoryService: Symbol.for('hourCandleHistoryService'),
+    oneMinuteCandleHistoryService: Symbol.for('oneMinuteCandleHistoryService'),
+    thirtyMinuteCandleHistoryService: Symbol.for('thirtyMinuteCandleHistoryService'),
+}
+
 export const TYPES = {
     ...baseServices,
     ...mathServices,
+    ...historyServices,
 }
