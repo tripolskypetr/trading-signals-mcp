@@ -46,36 +46,15 @@ Trading Signals MCP Server is a comprehensive technical analysis service designe
 
 ## Requirements
 
-Before setting up the Trading Signals MCP Server, ensure you have the following installed:
-
-- Node.js (v18 or later)
-- npm or yarn
+- Node.js (v18 or later) - Required for NPX execution
 
 ## Installation
 
-Clone the repository and install dependencies:
+### Recommended: Using NPX (No Installation Required)
 
-```sh
-git clone https://github.com/tripolskypetr/trading-signals-mcp.git
-cd trading-signals-mcp
-npm install  # or yarn install
-```
+The easiest way to use Trading Signals MCP Server is with NPX. This method doesn't require cloning the repository or installing dependencies.
 
-## Configuration
-
-No additional configuration is required. The server uses Binance's public API endpoints to fetch market data.
-
-## Integration with Claude Desktop
-
-Before integrating this MCP server with Claude Desktop, build the server using the following command:
-
-```sh
-npm run build  
-```
-
-To add this MCP server to Claude Desktop:
-
-Create or edit the Claude Desktop configuration file at:
+Add this MCP server to Claude Desktop by editing the configuration file:
 
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -85,22 +64,48 @@ Add the following configuration:
 
 ```json
 {
+  "mcpServers": {
+    "trading-signals-mcp": {
+      "command": "npx",
+      "args": ["-y", "trading-signals-mcp"]
+    }
+  }
+}
+```
+
+Restart Claude Desktop for the changes to take effect.
+
+### Alternative: Local Installation
+
+If you prefer to run a local copy or need to modify the code:
+
+```sh
+git clone https://github.com/tripolskypetr/trading-signals-mcp.git
+cd trading-signals-mcp
+npm install
+npm run build
+```
+
+Then configure Claude Desktop with the local path:
+
+```json
+{
     "mcpServers": {
         "trading-signals-mcp": {
             "command": "node",
             "args": [
                 "/path/to/trading-signals-mcp/build/index.mjs"
-            ],
-            "disabled": false,
-            "autoApprove": []
+            ]
         }
     }
 }
 ```
 
-Make sure to pass the correct location of the `index.mjs` file in the `args` field.
+Make sure to replace `/path/to/trading-signals-mcp` with the actual path to your cloned repository.
 
-Restart Claude Desktop for the changes to take effect.
+## Configuration
+
+No additional configuration is required. The server uses Binance's public API endpoints to fetch market data.
 
 ## Usage (For Connecting MCP HOST other than Claude)
 
