@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "binance-mcp": {
+            "command": "node",
+            "args": [
+                "/Users/Username/Desktop/trading-signals-mpc/build/index.js"
+            ],
+            "disabled": false,
+            "autoApprove": []
+        }
+    }
+}
+
