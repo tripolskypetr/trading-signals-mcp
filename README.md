@@ -33,55 +33,20 @@ Before setting up the Trading Signals MCP Server, ensure you have the following 
 
 - Node.js (v18 or later)
 - npm or yarn
-- Binance API key and secret (for Binance exchange integration)
 
 ## Installation
 
 Clone the repository and install dependencies:
 
 ```sh
-git clone https://github.com/your-repo/trading-signals-mcp.git
+git clone https://github.com/tripolskypetr/trading-signals-mcp.git
 cd trading-signals-mcp
 npm install  # or yarn install
 ```
 
 ## Configuration
 
-To configure the server, create a `.env` file in the root directory and specify the following variables:
-
-```sh
-# Binance API Configuration
-BINANCE_API_KEY=your_binance_api_key_here
-BINANCE_API_SECRET=your_binance_api_secret_here
-```
-
-## Creating a Binance API Key
-
-Before using the Binance API integration, you need to create an API key. This allows you to connect to Binance's servers, pull market data, and interact with the exchange.
-
-**Prerequisites:**
-- Complete identity verification on Binance
-- Enable two-factor authentication (2FA) on your account
-
-**Steps to create a Binance API Key:**
-
-1. Log in to your Binance account and click the profile icon, then [Account].
-
-2. Go to [API Management] then click [Create API].
-
-3. Select your preferred API Key type:
-   - System-generated API keys (HMAC symmetric encryption) - You'll get the API key and the Secret Key.
-   - Self-generated API keys (Ed25519 or RSA asymmetric encryption) - You'll receive an API key, but you have to create your own public-private key pair.
-
-4. Enter a label/name for your API Key.
-
-5. Verify with your 2FA devices and passkeys.
-
-6. Your API key is now created.
-
-**Important:** For trading signals analysis, you only need **Read** permissions. Do not enable trading or withdrawal permissions unless absolutely necessary.
-
-For more details on Binance API, please refer to the [Binance API Documentation](https://developers.binance.com/en/).
+No additional configuration is required. The server uses Binance's public API endpoints to fetch market data.
 
 ## Integration with Claude Desktop
 
@@ -107,12 +72,8 @@ Add the following configuration:
         "trading-signals-mcp": {
             "command": "node",
             "args": [
-                "/path/to/trading-signals-mcp/build/main/server.js"
+                "/path/to/trading-signals-mcp/build/index.mjs"
             ],
-            "env": {
-                "BINANCE_API_KEY": "your_binance_api_key",
-                "BINANCE_API_SECRET": "your_binance_api_secret"
-            },
             "disabled": false,
             "autoApprove": []
         }
@@ -120,7 +81,7 @@ Add the following configuration:
 }
 ```
 
-Make sure to pass the correct location of the `server.js` file in the `args` field.
+Make sure to pass the correct location of the `index.mjs` file in the `args` field.
 
 Restart Claude Desktop for the changes to take effect.
 
@@ -271,4 +232,4 @@ When a tool call fails, the server returns an error message with details. Common
 
 This project is open-source under the MIT License.
 
-For contributions, bug reports, or feature requests, submit an issue on [GitHub](https://github.com/your-repo/trading-signals-mcp).
+For contributions, bug reports, or feature requests, submit an issue on [GitHub](https://github.com/tripolskypetr/trading-signals-mcp).
