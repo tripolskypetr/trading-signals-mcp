@@ -1,17 +1,29 @@
 {
   "compilerOptions": {
+    "rootDir": "./src/",
+    "baseUrl": "./",
+    "lib": [
+      "es2015",
+      "es2023",
+    ],
+    "moduleDetection": "force",
+    "module": "ES2022",
     "target": "ES2022",
-    "module": "Node16",
-    "moduleResolution": "Node16",
-    "outDir": "./build",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "downlevelIteration": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmitOnError": false,
-
+    "isolatedModules": false,
+    "noPropertyAccessFromIndexSignature": false,
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "./types.d.ts",
+    "./scripts/fix.ts",
+    "./scripts/repl.ts"
+  ]
 }

@@ -1,57 +1,64 @@
 {
-    "name": "trading-signals-mcp",
-    "version": "1.0.8",
-    "main": "index.js",
-    "type": "module",
-    "bin": {
-        "binance-mcp": "./build/index.js"
-    },
-    "scripts": {
-        "build": ""
-    },
-    "files": [
-        "build"
-    ],
-    "keywords": [
-        "binance-smart-chain",
-        "bsc",
-        "blockchain",
-        "web3",
-        "cryptocurrency",
-        "defi",
-        "model-context-protocol",
-        "mcp",
-        "claude-integration",
-        "ai-agents",
-        "token-transfers",
-        "smart-contracts",
-        "pancakeswap",
-        "bep20",
-        "swap",
-        "liquidity",
-        "wallet-management",
-        "blockchain-tools",
-        "crypto-cli",
-        "defi-tools",
-        "meme-tokens",
-        "token-deployment",
-        "blockchain-development",
-        "web3-infrastructure",
-        "crypto-automation",
-        "token-security",
-        "moralis-integration",
-        "bnb-chain"
-    ],
-    "author": "Petr Tripolsky",
-    "license": "MIT",
-    "description": "Model Context Protocol for technical analysis ability",
-    "devDependencies": {
-        "typescript": "^5.8.2"
-    },
-    "dependencies": {
-        "@modelcontextprotocol/sdk": "^1.8.0",
-        "di-kit": "^1.0.18",
-        "functools-kit": "^1.0.93",
-        "node-binance-api": "^1.0.18"
-    }
+  "name": "trading-signals-mcp",
+  "version": "1.0.8",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "binance-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "binance-smart-chain",
+    "bsc",
+    "blockchain",
+    "web3",
+    "cryptocurrency",
+    "defi",
+    "model-context-protocol",
+    "mcp",
+    "claude-integration",
+    "ai-agents",
+    "token-transfers",
+    "smart-contracts",
+    "pancakeswap",
+    "bep20",
+    "swap",
+    "liquidity",
+    "wallet-management",
+    "blockchain-tools",
+    "crypto-cli",
+    "defi-tools",
+    "meme-tokens",
+    "token-deployment",
+    "blockchain-development",
+    "web3-infrastructure",
+    "crypto-automation",
+    "token-security",
+    "moralis-integration",
+    "bnb-chain"
+  ],
+  "author": "Petr Tripolsky",
+  "license": "MIT",
+  "description": "Model Context Protocol for technical analysis ability",
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/lodash-es": "4.17.12",
+    "@rollup/plugin-typescript": "11.1.6",
+    "tslib": "2.8.1",
+    "rollup": "3.29.4"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.8.0",
+    "di-kit": "1.0.18",
+    "functools-kit": "1.0.93",
+    "lodash-es": "4.17.21",
+    "node-binance-api": "1.0.18",
+    "trading-signals": "6.9.1",
+    "pinolog": "1.0.5"
+  }
 }
