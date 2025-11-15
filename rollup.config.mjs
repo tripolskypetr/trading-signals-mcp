@@ -9,6 +9,7 @@ export default [
         file: path.join("build", "index.mjs"),
         sourcemap: false,
         format: "esm",
+        banner: "#!/usr/bin/env node",
       },
     ],
     plugins: [

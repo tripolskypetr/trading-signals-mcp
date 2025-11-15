@@ -1,10 +1,10 @@
 {
   "name": "trading-signals-mcp",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "signals-mcp": "./build/index.js"
+    "trading-signals-mcp": "./build/index.mjs"
   },
   "scripts": {
     "build": "rollup -c"
