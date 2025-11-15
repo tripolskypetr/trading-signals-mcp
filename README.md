@@ -1,4 +1,4 @@
-# Trading Signals MCP Server
+# 🔥 Trading Signals MCP Server
 
 > claude_desktop_config.json
 
