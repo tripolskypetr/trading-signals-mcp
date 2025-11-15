@@ -2,7 +2,7 @@
 
 > claude_desktop_config.json
 
-![screenshot](./docs/2.png)
+![screenshot](https://raw.githubusercontent.com/tripolskypetr/trading-signals-mcp/refs/heads/master/docs/2.png)
 
 ```json
 {
