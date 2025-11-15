@@ -14,6 +14,7 @@ import FifteenMinuteCandleHistoryService from "./services/history/FifteenMinuteC
 import HourCandleHistoryService from "./services/history/HourCandleHistoryService";
 import OneMinuteCandleHistoryService from "./services/history/OneMinuteCandleHistoryService";
 import ThirtyMinuteCandleHistoryService from "./services/history/ThirtyMinuteCandleHistoryService";
+import MarketReportService from "./services/report/MarketReportService";
 
 const baseServices = {
     binanceService: inject<BinanceService>(TYPES.binanceService),
@@ -36,10 +37,15 @@ const historyServices = {
     thirtyMinuteCandleHistoryService: inject<ThirtyMinuteCandleHistoryService>(TYPES.thirtyMinuteCandleHistoryService),
 }
 
+const reportServices = {
+    marketReportService: inject<MarketReportService>(TYPES.marketReportService),
+}
+
 const signal = {
     ...baseServices,
     ...mathServices,
     ...historyServices,
+    ...reportServices,
 }
 
 init();

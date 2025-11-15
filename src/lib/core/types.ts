@@ -19,8 +19,13 @@ const historyServices = {
     thirtyMinuteCandleHistoryService: Symbol.for('thirtyMinuteCandleHistoryService'),
 }
 
+const reportServices = {
+    marketReportService: Symbol.for('marketReportService'),
+}
+
 export const TYPES = {
     ...baseServices,
     ...mathServices,
     ...historyServices,
+    ...reportServices,
 }

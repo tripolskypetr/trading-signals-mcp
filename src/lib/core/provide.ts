@@ -10,6 +10,7 @@ import FifteenMinuteCandleHistoryService from "../services/history/FifteenMinute
 import HourCandleHistoryService from "../services/history/HourCandleHistoryService";
 import OneMinuteCandleHistoryService from "../services/history/OneMinuteCandleHistoryService";
 import ThirtyMinuteCandleHistoryService from "../services/history/ThirtyMinuteCandleHistoryService";
+import MarketReportService from "../services/report/MarketReportService";
 import { provide } from "./di";
 import { TYPES } from "./types";
 
@@ -32,4 +33,8 @@ import { TYPES } from "./types";
     provide(TYPES.hourCandleHistoryService, () => new HourCandleHistoryService());
     provide(TYPES.oneMinuteCandleHistoryService, () => new OneMinuteCandleHistoryService());
     provide(TYPES.thirtyMinuteCandleHistoryService, () => new ThirtyMinuteCandleHistoryService());
+}
+
+{
+    provide(TYPES.marketReportService, () => new MarketReportService());
 }
