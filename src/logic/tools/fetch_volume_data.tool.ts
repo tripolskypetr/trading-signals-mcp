@@ -14,7 +14,7 @@ addFetchInfo({
     await signal.settingsConnectionService.getIsChatVolumeData(),
   fetchContent: async ({}, clientId, agentName) => {
     const symbol = signal.symbolMetaService.getSymbolForAgent(agentName);
-    const content = await signal.volumeDataClientService.generateVolumeDataReport(symbol);
+    const content = await signal.volumeDataMathService.generateVolumeDataReport(symbol);
     await event(clientId, "llm-tool-call", {
       toolName: ToolName.FetchVolumeData,
       content,

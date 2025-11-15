@@ -14,7 +14,7 @@ addFetchInfo({
     await signal.settingsConnectionService.getIsChatSlopeData(),
   fetchContent: async ({}, clientId, agentName) => {
     const symbol = signal.symbolMetaService.getSymbolForAgent(agentName);
-    const content = await signal.slopeDataClientService.generateSlopeDataReport(symbol);
+    const content = await signal.slopeDataMathService.generateSlopeDataReport(symbol);
     await event(clientId, "llm-tool-call", {
       toolName: ToolName.FetchSlopeData,
       content,

@@ -17,7 +17,7 @@ addFetchInfo({
     await signal.settingsConnectionService.getIsChatBookData(),
   fetchContent: async ({}, clientId, agentName) => {
     const symbol = signal.symbolMetaService.getSymbolForAgent(agentName);
-    const content = await signal.bookDataClientService.generateBookDataReport(symbol);
+    const content = await signal.bookDataMathService.generateBookDataReport(symbol);
     await event(clientId, "llm-tool-call", {
       toolName: ToolName.FetchBookData,
       content,

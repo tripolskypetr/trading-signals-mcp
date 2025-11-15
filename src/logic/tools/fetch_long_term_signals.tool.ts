@@ -15,7 +15,7 @@ addFetchInfo({
     await signal.settingsConnectionService.getIsChatLongSignals(),
   fetchContent: async ({}, clientId, agentName) => {
     const symbol = signal.symbolMetaService.getSymbolForAgent(agentName);
-    const content = await signal.longTermClientService.generateLongTermReport(symbol);
+    const content = await signal.longTermMathService.generateLongTermReport(symbol);
     await event(clientId, "llm-tool-call", {
       toolName: ToolName.FetchLongTermSignals,
       content,

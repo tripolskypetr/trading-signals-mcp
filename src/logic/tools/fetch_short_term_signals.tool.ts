@@ -15,7 +15,7 @@ addFetchInfo({
     await signal.settingsConnectionService.getIsChatShortSignals(),
   fetchContent: async ({}, clientId, agentName) => {
     const symbol = signal.symbolMetaService.getSymbolForAgent(agentName);
-    const content = await signal.shortTermClientService.generateShortTermReport(symbol);
+    const content = await signal.shortTermMathService.generateShortTermReport(symbol);
     await event(clientId, "llm-tool-call", {
       toolName: ToolName.FetchShortTermSignals,
       content,

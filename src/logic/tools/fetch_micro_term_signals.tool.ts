@@ -15,7 +15,7 @@ addFetchInfo({
     await signal.settingsConnectionService.getIsChatMicroSignals(),
   fetchContent: async ({}, clientId, agentName) => {
     const symbol = signal.symbolMetaService.getSymbolForAgent(agentName);
-    const content = await signal.microTermClientService.generateMicroTermReport(symbol);
+    const content = await signal.microTermMathService.generateMicroTermReport(symbol);
     await event(clientId, "llm-tool-call", {
       toolName: ToolName.FetchMicroTermSignals,
       content,
