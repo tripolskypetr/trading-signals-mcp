@@ -1,5 +1,22 @@
 # Trading Signals MCP Server
 
+> claude_desktop_config.json
+
+![screenshot](./docs/2.png)
+
+```json
+{
+  "mcpServers": {
+    "trading-signals-mcp": {
+      "command": "npx",
+      "args": ["-y",  "trading-signals-mcp"]
+    }
+  }
+}
+
+```
+
+
 ## Overview
 
 Trading Signals MCP Server is a comprehensive technical analysis service designed to provide real-time cryptocurrency trading signals and market insights through the Binance exchange. It delivers multi-timeframe analysis, advanced technical indicators, order book data, and historical candle patterns to support informed trading decisions. The server utilizes the Model Context Protocol (MCP) framework to ensure structured and efficient data delivery.
