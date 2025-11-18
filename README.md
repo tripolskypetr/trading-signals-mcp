@@ -1,5 +1,7 @@
 # 🔥 Trading Signals MCP Server
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/tripolskypetr/trading-signals-mcp)
+
 > claude_desktop_config.json
 
 ![screenshot](https://raw.githubusercontent.com/tripolskypetr/trading-signals-mcp/refs/heads/master/docs/3.png)
