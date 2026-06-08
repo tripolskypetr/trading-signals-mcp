@@ -45,6 +45,14 @@
   "author": "Petr Tripolsky",
   "license": "MIT",
   "description": "Model Context Protocol for technical analysis ability",
+  "homepage": "https://github.com/tripolskypetr/trading-signals-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tripolskypetr/trading-signals-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tripolskypetr/trading-signals-mcp/issues"
+  },
   "devDependencies": {
     "typescript": "^5.8.2",
     "@types/lodash-es": "4.17.12",
